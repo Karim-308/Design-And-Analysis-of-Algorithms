@@ -1,0 +1,28 @@
+function main():
+    Initialize an array nums containing numbers from 1 to 9.
+    Initialize an empty array square to represent the 3x3 grid of the magic square.
+    Initialize an array used to keep track of which numbers have been used in the permutation process.
+
+    Call the permutation function with nums, square, used, and index set to 0.
+
+function permutation(nums, square, used, index):
+    if index is equal to 9: // If all cells are filled
+        Check if the square is a magic square.
+        If it is a magic square, print the square.
+        Return.
+
+    Loop through each number in nums:
+        If the number has not been used:
+            Place the number in the current cell of the square.
+            Mark the number as used.
+            Recursively call permutation with updated parameters for the next cell.
+            Mark the number as unused (backtrack).
+
+function isMagicSquare(square):
+    Calculate the magic sum (sum of each row, column, and diagonal).
+    Check if each row and column sum equals the magic sum.
+    Check if the main diagonal and anti-diagonal sum equals the magic sum.
+    If all sums are equal, return true indicating a magic square, otherwise return false.
+
+function printMagicSquare(square):
+    Print the square to display the magic square.
